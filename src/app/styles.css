@@ -5,7 +5,7 @@ body{
 
 
 /* consejo */
-.advice-box{
+.advice-container{
     border-radius: 10px;
     background-color: #313A49;
     width: 90vw;
@@ -16,10 +16,19 @@ body{
     align-items: center;
 }
 
-.advice-container{
-    max-width: max-content;
-    overflow: hidden;
+.advice-box{
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: inherit;
+    font-size: x-large;
+    font-family: manrope;
+    font-weight: 800;
+    text-align: center;
 }
+
 
 .advice-title{
     color: #53FFAB;
@@ -28,33 +37,126 @@ body{
 .advice-text{
     color: aliceblue;
     max-width: 85%;
-    font-size: x-large;
-    font-family: manrope;
-    font-weight: 800;
-    text-align: center;
+}
+
+.advice-article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 90%;
+    min-height: 250px;
+   
 }
 
 #separator{
     transform: scale(0.7);
+    max-width: none !important;
 }
 
 /* Dado */
 .dado{
     width: 70px;
     height: 70px;
+    border: none;
     border-radius: 100px;
     background-color: #53FFAB;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 100ms;
-    position: relative;
+    position: inherit;
     transform: translateY(40px);
+    z-index: 10;
+  
 }
 
 .dado:hover {
    background-color: #53FFAB;
-   box-shadow: 0 0 10px #53ffac93, 0 0 15px #53ffac93, 0 0 20px #53ffac93;
+   box-shadow: 0 0 10px #53ffac0f, 0 0 20px #53ffac64, 0 0 40px #53ffac37;
 }
    
 
+/* loader */
+
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid aliceblue;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color:  #53FFAB aliceblue aliceblue aliceblue;
+  }
+  .lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  .lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  .lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+
+
+/* queries */
+@media screen and (min-width: 768px) {
+  .advice-container{
+      max-width: 50vw;
+      min-height: 250px;
+  }
+
+  .advice-box{
+      width: 100%;
+      min-height: 250px
+  }
+  #separator{
+      transform: scale(0.8);
+  }
+}
+@media screen and (min-width: 1024px) and (orientation : landscape) {
+  .advice-container{
+      max-width: 50%;
+      min-height: 250px;
+  }
+
+  .advice-box{
+      width: 100%;
+      min-height: 250px
+  }
+  #separator{
+      transform: scale(0.8);
+  }
+}
+
+  @media screen and (min-width: 1440px) and (orientation : landscape) {
+    .advice-container{
+        max-width: 40%;
+        min-height: 250px;
+    }
+
+    .advice-box{
+        width: 100%;
+        min-height: 250px
+    }
+    #separator{
+        transform: none;
+    }
+  }
