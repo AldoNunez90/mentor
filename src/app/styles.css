@@ -1,0 +1,60 @@
+
+body{
+    background-color: #202632;
+}
+
+
+/* consejo */
+.advice-box{
+    border-radius: 10px;
+    background-color: #313A49;
+    width: 90vw;
+    height: min-content;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.advice-container{
+    max-width: max-content;
+    overflow: hidden;
+}
+
+.advice-title{
+    color: #53FFAB;
+}
+
+.advice-text{
+    color: aliceblue;
+    max-width: 85%;
+    font-size: x-large;
+    font-family: manrope;
+    font-weight: 800;
+    text-align: center;
+}
+
+#separator{
+    transform: scale(0.7);
+}
+
+/* Dado */
+.dado{
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+    background-color: #53FFAB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 100ms;
+    position: relative;
+    transform: translateY(40px);
+}
+
+.dado:hover {
+   background-color: #53FFAB;
+   box-shadow: 0 0 10px #53ffac93, 0 0 15px #53ffac93, 0 0 20px #53ffac93;
+}
+   
+
